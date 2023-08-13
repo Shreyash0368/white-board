@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="./style.css">
+    <title>Open Board</title>
+</head>
+
+<body>
+    <!-- Tool Dropdown button -->
+    <div class="tool-box-dropdown">
+        <span class="material-icons">
+            menu
+        </span>
+    </div>
+
+    <!-- Tool box -->
+    <div class="tool-box">
+        <i class="fa-solid fa-pencil"></i>
+        <div class="pencil-edit">
+            <input type="color" value="#000000" name="pencil-color" id="pencil-color">
+            <input type="range" min="10" value="20" name="pencil-width" id="pencil-width">
+        </div>
+
+        <i class="fa-solid fa-eraser"></i>
+        <div class="eraser-edit">
+            <input type="range" min="10" value="20" name="eraser-width" id="eraser-width">
+        </div>
+
+        <span class="material-icons" id="download">
+            download
+        </span>
+
+        <span class="material-icons" id="upload">
+            file_upload
+        </span>
+        <input type="file" name="note-image" id="note-image">
+
+        <span class="material-icons" id="note">
+            description
+        </span>
+
+        <span class="material-icons" id="undo">
+            undo
+        </span>
+
+        <span class="material-icons" id="redo">
+            redo
+        </span>
+    </div>
+
+    <!-- Canvas Section -->
+    <canvas class="drawing-page" id="drawing-page"></canvas>
+
+    <!-- Sticky Notes -->
+    <script src="https://cdn.socket.io/4.6.0/socket.io.min.js"
+        integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+"
+        crossorigin="anonymous"></script>
+    <script>
+        let socket = io.connect('http://localhost:3000');
+    </script>
+    <script src="./undo-redo.js"></script>
+    <script src="./canvas-handling.js"></script>
+    <script src="./note-handling.js"></script>
+    <script src="./upload-download.js"></script>
+</body>
+
+</html>

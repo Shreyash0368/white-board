@@ -1,0 +1,189 @@
+* {
+    margin: 0px;
+}
+
+/* tool-box */
+.tool-box-dropdown {
+    height: 50px;
+    width: 50px;
+
+    border-radius: 50%;
+
+    position: absolute;
+    top: 3vh;
+    left: 2vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: whitesmoke;
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.3),
+        /* Outer shadow with increased blur radius */
+        inset 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Inner shadow with increased blur radius */
+}
+
+.tool-box-dropdown>* {
+    font-size: 2rem;
+}
+
+.tool-box {
+    height: 70px;
+    width: 50rem;
+
+    position: absolute;
+    top: 2vh;
+    left: calc((100vw - 50rem) / 2);
+
+    box-shadow:
+        0 4px 10px rgba(0, 0, 0, 0.3),
+        /* Outer shadow with increased blur radius */
+        inset 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Inner shadow with increased blur radius */
+
+    background-color: #dff9fb;
+
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tool-box>* {
+    width: 3rem;
+    height: 3rem;
+    
+    font-size: 2rem;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 10px;
+}
+
+.in-use {
+    background-color: #00cec9;
+}
+
+/* Pencil edit options */
+.draw-button {
+    position: relative;
+    border: 2px solid black;
+}
+
+.pencil-edit {
+    height: 5rem;
+    width: 7rem;
+
+    position: absolute;
+    top: 4.2rem;
+    left: 0;
+
+    display: none;
+    flex-direction: column;   
+    justify-content: space-around; 
+    align-items: center;
+
+    background-color: #dff9fb;
+    box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3), /* Outer shadow with increased blur radius */
+    inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow */
+    
+}
+
+#pencil-color {    
+    height: 50%;
+    width: 70%;    
+}
+
+#pencil-width {    
+    width: 80%;
+}
+
+/* Eraser edit */
+.eraser-edit {
+    height: 3rem;
+    width: 7rem;
+
+    position: absolute;
+    top: 4.25rem;
+    left: 7rem;
+
+    display: none;
+
+    background-color: #dff9fb;
+    box-shadow:
+    0 0 10px rgba(0, 0, 0, 0.3), /* Outer shadow with increased blur radius */
+    inset 0 0 10px rgba(0, 0, 0, 0.2); /* Inner shadow */   
+}
+
+.eraser-edit > * {
+    width: 80%;
+}
+
+/* Canvas Drawing Page */
+.drawing-page {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Sticky Note */
+.sticky-note {
+    height: 20rem;
+    width: 15rem;
+    
+    display: none;
+
+    position: absolute;
+    top: 10rem;
+    left: 5rem;
+}
+
+.header {
+    height: 15%;
+    width: 100%;
+
+    background-color: #0984e3;
+    border-radius: 2px;
+}
+
+.button {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    position: absolute;
+}
+
+#minimize {
+    background-color: lightgreen; 
+    right: 4rem;
+    top: calc((15% - 2rem)/2);
+}
+
+#remove {
+    background-color: red;
+    right: 1rem;
+    top: calc((15% - 2rem)/2);
+}
+
+.content-area {
+    height: 85%;
+    width: 100%;
+
+    box-sizing: border-box;
+    padding: 5px 10px;
+    
+    background-color: #74b9ff;
+    border-radius: 2px;
+
+    outline: none;
+
+    font-size: large;
+}
+
+/* upload button */
+#note-image {
+    display: none;
+}
